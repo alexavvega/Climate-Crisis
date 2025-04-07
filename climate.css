@@ -11,10 +11,16 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
+    padding: 4rem;
     background-color: #1B2631;
     color: #8f8f8f;
     text-align: center;
     justify-content: flex-start;
+}
+@media (max-width: 768px) {
+    body {
+        padding-top: 8rem;
+    }
 }
 
 .main-header {
@@ -31,6 +37,18 @@ body {
     overflow: visible;
 }
 
+@media (max-width: 768px) {
+    .main-header {
+        padding: 1rem 0;
+        z-index: 1001;
+    }
+}
+@media (max-width: 480px) {
+    .main-header {
+        padding: 0.5rem 0;
+        z-index: 1001;
+    }
+}
 .main-header h1 {
     position: absolute;
     top: 50%;
@@ -44,6 +62,11 @@ body {
     text-transform: uppercase;
     z-index: 1002;
     margin: 0;
+}
+@media (max-width: 768px) {
+    .main-header h1 {
+        font-size: 2rem;
+    }
 }
 .sub-header {
     background-color: #d6eaf8;
@@ -60,12 +83,31 @@ body {
     align-items: center;
     justify-content: flex-end;
 }
-
+@media (max-width: 768px) {
+    .sub-header {
+        position: static;
+        top: 0;
+        padding: 2rem 0;
+        z-index: 1000;
+    }
+}
+@media (max-width: 480px) {
+    .sub-header {
+        padding: 2rem 0;
+        z-index: 1000;
+    }
+}
 .sub-header .buttons {
     display: flex;
     flex-direction: row;
     gap: 2.5rem;
     margin-top: 2rem;
+}
+@media (max-width: 768px) {
+    .sub-header .buttons {
+        flex-direction: column;
+        gap: .4rem;
+    }
 }
 
 button {
@@ -79,6 +121,12 @@ button {
     border-radius: 3.5px;
     cursor: pointer;
     transition: 0.3s ease;
+}
+@media (max-width: 768px) {
+    button {
+        padding: 8px 16px;
+        font-size: 1rem;
+    }
 }
 button:hover {
         background-color: #b0d3ec;
@@ -107,6 +155,38 @@ button:hover {
     max-width: 300px;
 }
 
+@media (max-width: 768px) {
+    .all-images img {
+        height: 140px;
+    }
+    .image-text {
+        font-size: 1rem;
+        max-width: 180px;
+    }
+}
+@media (max-width: 480px) {
+    .all-images img {
+        height: 120px;
+    }
+    .image-text {
+        font-size: 0.8rem;
+        max-width: 120px;
+    }
+}
+@media (max-width: 768px) {
+    body {
+        padding: 2rem;
+    }
+
+    .all-images {
+        padding: 2rem;
+    }
+
+    p, h1, h2 {
+        margin-left: 2rem;
+        margin-right: 0.5rem;
+    }
+}
 h1,
 h2 {
     margin-bottom: 5px;
@@ -117,6 +197,8 @@ p {
     line-height: 1.5;
     color: #555;
 }
+
+
 
 footer {
     background-color: #1b4f72;
@@ -189,4 +271,20 @@ footer {
 
 .progress-marker-four {
     top: 80%;
+}
+
+@media (max-width: 768px) {
+    #progress-bar {
+        width: 15px;
+        z-index: 1001;
+    }
+    #progress {
+        width: 100%;
+        z-index: 1001;
+    }
+    .progress-marker {
+        width: 8px;
+        height: 8px;
+        z-index: 1001;
+    }
 }
